@@ -22,7 +22,7 @@ try{
                 TipoEvento.PRIVATO, 200 );
 
          ed.save(gala);
-         
+
 
 } catch (Exception ex) {
     System.err.println(ex.getMessage());
@@ -30,8 +30,5 @@ try{
     entityManager.close();
     getEntityManagerFactory().close();
 }
-
-
-
     }
 }

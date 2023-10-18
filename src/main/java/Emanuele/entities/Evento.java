@@ -1,13 +1,10 @@
 package Emanuele.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table
+@Table(name = "Evento")
 public class Evento {
 
     @Id
@@ -16,7 +13,9 @@ public class Evento {
     private String title;
     private LocalDate dataEvento;
     private String descrizione;
-    TipoEvento tipoEvento;
+
+    @Enumerated(EnumType.STRING)
+    private TipoEvento tipoEvento;
     private int numeroMassimoPartecipanti;
 
     public Evento() {

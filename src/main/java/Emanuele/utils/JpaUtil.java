@@ -1,5 +1,4 @@
 package Emanuele.utils;
-
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
@@ -9,7 +8,7 @@ public class JpaUtil {
 
     static {
         try{
-            entityManagerFactory = Persistence.createEntityManagerFactory("gestioneeventi");
+            entityManagerFactory = Persistence.createEntityManagerFactory("gestioneventi");
         } catch (Throwable ex){
             System.err.println("Initial EntityManagerFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
